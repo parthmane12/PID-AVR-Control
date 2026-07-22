@@ -4,7 +4,7 @@ A MATLAB Simulink project that models and simulates an Automatic Voltage Regulat
 
 ---
 
-## 📌 Overview
+## Overview
 
 An Automatic Voltage Regulator (AVR) is a control system used in synchronous generators to regulate terminal voltage by controlling the excitation voltage.
 
@@ -12,7 +12,7 @@ This project implements a closed-loop AVR model in MATLAB Simulink and compares 
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Model an Automatic Voltage Regulator (AVR) in MATLAB Simulink.
 - Design and tune a PID controller.
@@ -22,15 +22,28 @@ This project implements a closed-loop AVR model in MATLAB Simulink and compares 
 
 ---
 
-## 🛠 Software Used
+## Software Used
 
 - MATLAB R2023a (or later)
 - Simulink
 - Control System Toolbox
 
 ---
+## Block Diagrams
 
-## ⚙ System Components
+Open-Loop PID AVR
+<p align="center">
+  <img src="Images/OL_PID_BD.png" width="100%">
+</p>
+
+Closed-Loop PID AVR
+<p align="center">
+  <img src="Images/CL_PID_BD.png" width="100%">
+</p>
+
+---
+
+## System Components
 
 The AVR model consists of:
 
@@ -42,9 +55,17 @@ The AVR model consists of:
 
 The controller continuously adjusts the excitation voltage to maintain the desired generator terminal voltage.
 
+## Values Used
+
+Parameter| Gain | Time Constant |
+|--------|-------|--------------|
+Amplifier | 10 | 0.1 |
+Exciter | 1 | 0.4 |
+Generator | 1 | 1 |
+Voltage Sensor | 1 | 0.05 |
 ---
 
-## 🚀 Working Principle
+## Working Principle
 
 1. A reference voltage is applied to the system.
 2. The sensor measures the generator terminal voltage.
@@ -55,7 +76,7 @@ The controller continuously adjusts the excitation voltage to maintain the desir
 
 ---
 
-## 📊 Performance Analysis
+## Performance Analysis
 
 The following parameters were analyzed:
 
@@ -70,7 +91,7 @@ The PID-controlled system demonstrates faster response and improved voltage regu
 ---
 
 
-## 📈 Results
+## Results
 
 The PID controller significantly improves system performance by:
 
@@ -82,7 +103,7 @@ The PID controller significantly improves system performance by:
 
 ---
 
-## 📚 Key Concepts
+## Key Concepts
 
 - Automatic Voltage Regulation
 - Closed-Loop Control Systems
@@ -94,7 +115,7 @@ The PID controller significantly improves system performance by:
 
 ---
 
-## 🎓 Learning Outcomes
+## Learning Outcomes
 
 Through this project, I gained practical experience in:
 
@@ -106,12 +127,25 @@ Through this project, I gained practical experience in:
 ---
 
 
-## 📷 Screenshots
+## Scope Results:
 
+ Open-Loop Step Response (Without PID):
+<p align="center">
+  <img src="Images/OL_no_PID.png" width="100%">
+</p>
 
-- Simulink Block Diagram
-- Open-Loop Step Response
-- Closed-Loop Step Response
-- PID Tuning Results
-- Scope Output
+Closed-Loop Step Response (Without PID):
+<p align="center">
+  <img src="Images/CL_no_PID.png" width="100%">
+</p>
+
+Open-Loop PID AVR Response:
+<p align="center">
+  <img src="Images/OL_PID.png" width="100%">
+</p>
+
+ Closed-Loop PID AVR Response:
+ <p align="center">
+  <img src="Images/CL_PID.png" width="100%">
+</p>
 
